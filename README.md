@@ -1,4 +1,5 @@
 # t-sne
 Visualización de datos usando t-SNE
 
-{% include by_type.html %}
+<img></img>
+[aqui](https://rhoffmannv.github.io/t-sne/by_type.html)
