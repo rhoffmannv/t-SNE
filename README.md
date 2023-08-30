@@ -1,5 +1,7 @@
 # t-sne
 Visualización de datos usando t-SNE
 
-<img></img>
-[aqui](https://rhoffmannv.github.io/t-sne/by_type.html)
+<img src="by_type.svg" width=600 height = "auto"></img>
+
+Ver gráfico interactivo aquí 😄
+[😄](https://rhoffmannv.github.io/t-sne/by_type.html)
