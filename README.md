@@ -1,4 +1,4 @@
-# t-sne
+# Visualización de datos usando t-SNE
 Visualización de datos usando t-SNE
 
 <img src="by_type.svg" width=600 height = "auto"></img>
