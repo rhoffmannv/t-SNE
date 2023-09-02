@@ -34,7 +34,7 @@ Código implementado y explicado en detalle en **Visualización de Dígitos.ipyn
 ## t-SNE
 
 - Se importa t-SNE desde Scikit-Learn.
-- Se declara modelo con *n_components = 2*.
+- Se crea instancia con *n_components = 2*.
 - Se transforman los datos, obteniendo representación con 2 componentes
 
 ## Visualización de resultados
@@ -67,7 +67,7 @@ Código implementado y explicado en detalle en **Visualización de Paises.ipynb*
 
 ## t-SNE
 
-- Se importa t-SNE desde Scikit-Learn y se declara modelo con *n_components = 2*.
+- Se importa t-SNE desde Scikit-Learn y se declara instancia con *n_components = 2*.
 - Se transforman los datos, obteniendo representación con 2 componentes
 
 ## Visualización de resultados
@@ -109,7 +109,7 @@ Código implementado y explicado en detalle en **Visualización de Pokemons.ipyn
 
 ## t-SNE
 
-- Se importa t-SNE desde Scikit-Learn y se declara modelo con *n_components = 2*.
+- Se importa t-SNE desde Scikit-Learn y se declara instancia con *n_components = 2*.
 - Se transforman los datos, obteniendo representación con 2 componentes.
 
 ## Visualización de resultados
@@ -141,4 +141,8 @@ Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by
 
 ### Gráfico 3D
 
-Se crea gráfico 
+- Se crea gráfico interactivo 3D con Plotly.
+- Para esto se requiere ajustar el algoritmo t-SNE con 3 componentes.
+- Se grafica coloreando los Pokemons según su *tipo principal*. El tamaño de las esferas se determina a partir del poder total de los Pokemon.
+
+Ver gráfico interactivo 3D [aquí 📊](https://rhoffmannv.github.io/t-sne/html/pokemon_3d.html)  
