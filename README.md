@@ -18,8 +18,8 @@ Código implementado y explicado en detalle en **Visualización de Dígitos.ipyn
 
 ## Importación de datos y librerías
 - Se importan las librerías:
-  - Numpy. 
-  - Matplotlib.
+  - Numpy 
+  - Matplotlib
 - Los datos se importan directamente de Scikit Learn:
   - from sklearn.datasets import load_digits
 
@@ -52,9 +52,9 @@ Código implementado y explicado en detalle en **Visualización de Paises.ipynb*
 
 ## Importación de datos y librerías
 - Se importan las librerías:
-  - Numpy. 
-  - Pandas.
-  - Plotly.
+  - Numpy
+  - Pandas
+  - Plotly
 - Los datos se obtuvieron de Kaggle:  
   - [Global Country Information Dataset 2023](https://www.kaggle.com/datasets/nelgiriyewithana/countries-of-the-world-2023)
 
@@ -73,7 +73,7 @@ Código implementado y explicado en detalle en **Visualización de Paises.ipynb*
 ## Visualización de resultados
 - Se usa la librería Plotly para generar gráficos interactivos.
 - Al colocar cursor sobre *datapoint* se muestra *pop-up* con todos los datos del país.
-- A continuación se muestra una imagen plana, pero al cliquearla se abre el gráfico intereactivo en otra pestaña.
+- A continuación se muestra una imagen plana, pero al cliquearla se abre el gráfico interactivo en otra pestaña.
 [<img src="images/paises_by_gdp.svg" width=800 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/paises-tsne.html)
 
 Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/paises-tsne.html)
@@ -89,9 +89,9 @@ Código implementado y explicado en detalle en **Visualización de Pokemons.ipyn
 
 ## Importación de datos y librerías
 - Se importan las librerías:
-  - Numpy. 
-  - Pandas.
-  - Plotly.
+  - Numpy 
+  - Pandas
+  - Plotly
 - Los datos se obtuvieron de Kaggle:  
   - [Pokemon with stats](https://www.kaggle.com/datasets/abcsds/pokemon)
 
@@ -101,19 +101,36 @@ Código implementado y explicado en detalle en **Visualización de Pokemons.ipyn
 - Se dejan solo los Pokemon de la primera generación (151).
 - Se normaliza con Min-Max los datos númericos.
 - Se transforman los valores booleanos a 0 y 1 (si es o no legendario). 
-- Se transforman las categorias a codificación One-Hot (para *primary type* y *secondary type*)
+- Se transforman las categorias a codificación One-Hot (para *primary type* y *secondary type*).
 - Se eliminan columnas innecesarias como el nombre del Pokemon, etc.
 
 ## t-SNE
 
 - Se importa t-SNE desde Scikit-Learn y se declara modelo con *n_components = 2*.
-- Se transforman los datos, obteniendo representación con 2 componentes
-  
-<img src="images/by_type.svg" width=600 height = "auto"></img>   
-Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by_type_text.html)
+- Se transforman los datos, obteniendo representación con 2 componentes.
 
+## Visualización de resultados
+> Se usa la librería Plotly para generar gráficos interactivos.
+> Al colocar cursor sobre *datapoint* se muestra *pop-up* con todas las estadíticas del Pokemon.
+> A continuación se muestran imágenes planas, pero se pueden abrir los gráficos interactivos cliqueándolas.
+
+En el siguiente gráfico se colorean los Pokemon según su *tipo primario*.
+
+[<img src="images/by_type.svg" width=800 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/by_type_text.html)
+
+Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by_type_text.html)  
+
+- Se puede ver que el algoritmo t-SNE separa claramente los Pokemon según su *tipo primario*.
+- En el gráfico interactivo se puede ver como agrupa de manera correcta Pokemons y sus evoluciones.
+- También agrupa los Pokemon legendarios aun cuando tienen *tipos* distintos.
+- Resulta interesante que agrupa a Charizard cerca de los legendarios, lo que tiene sentido puesto que es uno de los Pokemons más fuertes.
+
+En el siguiente gráfico se colorean los Pokemon según su *tipo secundario*. 
+
+[<img src="images/by_type_2.svg" width=800 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/by_type_2_text.html)
 <img src="images/by_type_2.svg" width=600 height = "auto"></img>
 
-Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by_type_2_text.html)
+Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by_type_2_text.html)  
 
+- Se puede ver que el algoritmo t-SNE también separa claramente los Pokemon según su *tipo secundario*.
 
