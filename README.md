@@ -18,8 +18,8 @@ Código implementado y explicado en detalle en **Visualización de Dígitos.ipyn
 
 ## Importación de datos y librerías
 - Se importan las librerías:
-  - Numpy 
-  - Matplotlib
+  - Numpy. 
+  - Matplotlib.
 - Los datos se importan directamente de Scikit Learn:
   - from sklearn.datasets import load_digits
 
@@ -48,12 +48,13 @@ Código implementado y explicado en detalle en **Visualización de Dígitos.ipyn
 - Se puede ver que el algoritmo t-SNE separa de manera satisfactoria los dígitos distintos en cúmulos claramente diferenciados entre ellos.
 
 # Visualización de Paises
+Código implementado y explicado en detalle en **Visualización de Paises.ipynb**.
 
 ## Importación de datos y librerías
 - Se importan las librerías:
-  - Numpy 
-  - Pandas
-  - Plotly
+  - Numpy. 
+  - Pandas.
+  - Plotly.
 - Los datos se obtuvieron de Kaggle:  
   - [Global Country Information Dataset 2023](https://www.kaggle.com/datasets/nelgiriyewithana/countries-of-the-world-2023)
 
@@ -73,14 +74,41 @@ Código implementado y explicado en detalle en **Visualización de Dígitos.ipyn
 - Se usa la librería Plotly para generar gráficos interactivos.
 - Al colocar cursor sobre *datapoint* se muestra *pop-up* con todos los datos del país.
 - A continuación se muestra una imagen plana, pero al cliquearla se abre el gráfico intereactivo en otra pestaña.
-<p align="center>[<img src="images/paises_by_gdp.svg" width=600 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)</p>
+[<img src="images/paises_by_gdp.svg" width=800 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/paises-tsne.html)
 
-Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)
+Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/paises-tsne.html)
 
+- El gráfico interactivo contiene un desplegable para seleccionar la estadística que se quiere usar para colorear los *datapoints*.
+- La imagen estática colorea los paises por GDP y se puede ver una tendiencia, donde los paises en la esquina superior izquierda tienen bajo GDP comparado con los paises de la esquina inferior derecha.
+- En el gráfico interactivo se constata que los paises en la esquina superior izquierda corresponden en su mayoría a paises poco desarrollado de África y que paises en el lado derecho corresponden a paises más desarrollados, generalmente europeos o paises de la Mancomunidad Británica de Naciones.
+- A su vez, se puede ver que China y la India aparecen agrupados juntos y en el lado derecho, lo que tiene sentido ya que son paises con gran poder económico y con características similares, como la gran cantidad de habitantes.
 
 
 # Visualización de Pokemons
+Código implementado y explicado en detalle en **Visualización de Pokemons.ipynb**.
 
+## Importación de datos y librerías
+- Se importan las librerías:
+  - Numpy. 
+  - Pandas.
+  - Plotly.
+- Los datos se obtuvieron de Kaggle:  
+  - [Pokemon with stats](https://www.kaggle.com/datasets/abcsds/pokemon)
+
+## Preprocesamiento de datos
+- Se tienen datos de 721 Pokemones.
+- Por cada Pokemon se tiene estadísticas de juego como *attack*, *defense*, *primary type*, *secondary type*, etc.
+- Se dejan solo los Pokemon de la primera generación (151).
+- Se normaliza con Min-Max los datos númericos.
+- Se transforman los valores booleanos a 0 y 1 (si es o no legendario). 
+- Se transforman las categorias a codificación One-Hot (para *primary type* y *secondary type*)
+- Se eliminan columnas innecesarias como el nombre del Pokemon, etc.
+
+## t-SNE
+
+- Se importa t-SNE desde Scikit-Learn y se declara modelo con *n_components = 2*.
+- Se transforman los datos, obteniendo representación con 2 componentes
+  
 <img src="images/by_type.svg" width=600 height = "auto"></img>   
 Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by_type_text.html)
 
