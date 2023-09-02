@@ -35,7 +35,7 @@ Código implementado y explicado en detalle en **Visualización de Dígitos.ipyn
 
 - Se importa t-SNE desde Scikit-Learn.
 - Se crea instancia con *n_components = 2*.
-- Se transforman los datos, obteniendo representación con 2 componentes
+- Se transforman los datos, obteniendo representación con 2 componentes.
 
 ## Visualización de resultados
 
@@ -68,7 +68,7 @@ Código implementado y explicado en detalle en **Visualización de Paises.ipynb*
 ## t-SNE
 
 - Se importa t-SNE desde Scikit-Learn y se declara instancia con *n_components = 2*.
-- Se transforman los datos, obteniendo representación con 2 componentes
+- Se transforman los datos, obteniendo representación con 2 componentes.
 
 ## Visualización de resultados
 > Se usa la librería Plotly para generar gráficos interactivos.  
