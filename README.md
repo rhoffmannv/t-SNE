@@ -2,15 +2,10 @@
 Se realizan visualizaciones de datos multidimensionales en gráficos 2D y 3D usando el algoritmo t-SNE (*t-Distributed Stochastic Neighbor Embedding*)
 sobre 3 *datasets* distintos:
 
-- **Dataset de dígitos**: Correspondiente a imágenes de dígitos entre 0 y 9 escritos a mano (similar a MNIST).
+- **Dataset de dígitos**: Correspondiente a imágenes de dígitos entre 0 y 9 escritos a mano (similar a MNIST). 
 - **Dataset de paises**: Cada *datapoint* corresponde a un país, con estadísticas como GDP, población, área, etc.
 - **Dataset de pokemons**: Cada *datapoint* correponde a un pokemon de la 1° generación, con sus estadisticas en videojuegos como características.
-
-El código implementado para cada *dataset* se encuentra en los Jupyter Notebooks, respectivamente:
-- **Visualización de Dígitos.ipynb**
-- **Visualización de Paises.ipynb**
-- **Visualización de Pokemons.ipynb**
-
+  
 Sobre cada *dataset* se procede de manera símilar:
 - Se importan librerías y datos.
 - Se preprocesan los datos.
@@ -18,6 +13,8 @@ Sobre cada *dataset* se procede de manera símilar:
 - Se visualizan los resultados.
 
 # Visualización de Dígitos
+
+Código implementado y explicado en detalle en **Visualización de Dígitos.ipynb**.
 
 ## Importación de datos y librerías
 - Se importan las librerías:
@@ -45,10 +42,41 @@ Sobre cada *dataset* se procede de manera símilar:
 - Se grafica cada *datapoint* en un gráfico tipo *scatter* usando *pyplot* de Matplotlib.
 - Se grafican las etiquetas de los números sobre los cúmulos para una visualización más fácil.
 
-<p text-align="center"><img src="images/visualizacion digitos.svg" width=600 height = "auto"></img></p>
+<p align="center"><img src="images/visualizacion digitos.svg" width=600 height = "auto"></img></p>
 
 - En el gráfico se colorea cada *datapoint* según la etiqueta real.
 - Se puede ver que el algoritmo t-SNE separa de manera satisfactoria los dígitos distintos en cúmulos claramente diferenciados entre ellos.
+
+# Visualización de Paises
+
+## Importación de datos y librerías
+- Se importan las librerías:
+  - Numpy 
+  - Pandas
+  - Plotly
+- Los datos se obtuvieron de Kaggle:  
+  - [Global Country Information Dataset 2023](https://www.kaggle.com/datasets/nelgiriyewithana/countries-of-the-world-2023)
+
+## Preprocesamiento de datos
+- Se tienen estadísticas de 195 paises.
+- Se eliminan los paises con datos faltantes y se reduce a 110 paises.
+- Se dejan solo las características numéricas.
+- Se limpian y transforman datos numericos en formato *string* a *float*. 
+- Se normaliza usando Min-Max.
+
+## t-SNE
+
+- Se importa t-SNE desde Scikit-Learn y se declara modelo con *n_components = 2*.
+- Se transforman los datos, obteniendo representación con 2 componentes
+
+## Visualización de resultados
+- Se usa la librería Plotly para generar gráficos interactivos.
+- Al colocar cursor sobre *datapoint* se muestra *pop-up* con todos los datos del país.
+- A continuación se muestra una imagen plana, pero al cliquearla se abre el gráfico intereactivo en otra pestaña.
+[<p align="center><img src="images/paises_by_gdp.svg" width=600 height = "auto"></img></p>](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)
+
+Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)
+
 
 
 # Visualización de Pokemons
@@ -60,8 +88,4 @@ Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by
 
 Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by_type_2_text.html)
 
-# Visualización de Paises
 
-<img src="images/paises_by_gdp.svg" width=600 height = "auto"></img>
-
-Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)
