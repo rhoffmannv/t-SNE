@@ -73,7 +73,7 @@ Código implementado y explicado en detalle en **Visualización de Dígitos.ipyn
 - Se usa la librería Plotly para generar gráficos interactivos.
 - Al colocar cursor sobre *datapoint* se muestra *pop-up* con todos los datos del país.
 - A continuación se muestra una imagen plana, pero al cliquearla se abre el gráfico intereactivo en otra pestaña.
-[<p align="center><img src="images/paises_by_gdp.svg" width=600 height = "auto"></img></p>](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)
+<p align="center>[<img src="images/paises_by_gdp.svg" width=600 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)</p>
 
 Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/paises_by_gdp_text.html)
 
