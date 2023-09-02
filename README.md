@@ -18,7 +18,37 @@ Sobre cada *dataset* se procede de manera símilar:
 - Se visualizan los resultados.
 
 # Visualización de Dígitos
-<img src="images/visualizacion digitos.svg" width=600 height = "auto"></img>
+
+## Importación de datos y librerías
+- Se importan las librerías:
+  - Numpy 
+  - Matplotlib
+- Los datos se importan directamente de Scikit Learn:
+  - from sklearn.datasets import load_digits
+
+## Preprocesamiento de datos
+- Los datos disponibles tienen dimensiones (1797, 64):
+  - Hay 1797 *datapoint* cada uno correspondiente a un dígito entre 0 y 9 escrito a mano.
+  - Cada *dataponit* corresponde a una imagen de 8x8 pixeles, aplanado a un vector de 64 componentes.
+  - Cada pixel es un valor entre 0 y 255.
+- Los datos además contienen la etiqueta correcta del número representado, lo que servirá para evaluar los resultados.
+- No se requiere realizar transformaciones sobre los datos.
+
+## t-SNE
+
+- Se importa t-SNE desde Scikit-Learn.
+- Se declara modelo con *n_components = 2*.
+- Se transforman los datos, obteniendo representación con 2 componentes
+
+## Visualización de resultados
+
+- Se grafica cada *datapoint* en un gráfico tipo *scatter* usando *pyplot* de Matplotlib.
+- Se grafican las etiquetas de los números sobre los cúmulos para una visualización más fácil.
+
+<p text-align="center"><img src="images/visualizacion digitos.svg" width=600 height = "auto"></img></p>
+
+- En el gráfico se colorea cada *datapoint* según la etiqueta real.
+- Se puede ver que el algoritmo t-SNE separa de manera satisfactoria los dígitos distintos en cúmulos claramente diferenciados entre ellos.
 
 
 # Visualización de Pokemons
