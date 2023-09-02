@@ -71,9 +71,12 @@ Código implementado y explicado en detalle en **Visualización de Paises.ipynb*
 - Se transforman los datos, obteniendo representación con 2 componentes
 
 ## Visualización de resultados
-- Se usa la librería Plotly para generar gráficos interactivos.
-- Al colocar cursor sobre *datapoint* se muestra *pop-up* con todos los datos del país.
-- A continuación se muestra una imagen plana, pero al cliquearla se abre el gráfico interactivo en otra pestaña.
+> Se usa la librería Plotly para generar gráficos interactivos.  
+> Al colocar cursor sobre *datapoint* se muestra *pop-up* con todos los datos del país.  
+> A continuación se muestra una imagen plana, pero al cliquearla se abre el gráfico interactivo en otra pestaña.
+
+- Se grafica cada paises en un gráfico tipo *scatter* según las dos componentes encontradas con t-SNE.
+
 [<img src="images/paises_by_gdp.svg" width=800 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/paises-tsne.html)
 
 Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/paises-tsne.html)
@@ -110,11 +113,12 @@ Código implementado y explicado en detalle en **Visualización de Pokemons.ipyn
 - Se transforman los datos, obteniendo representación con 2 componentes.
 
 ## Visualización de resultados
-> Se usa la librería Plotly para generar gráficos interactivos.
-> Al colocar cursor sobre *datapoint* se muestra *pop-up* con todas las estadíticas del Pokemon.
-> A continuación se muestran imágenes planas, pero se pueden abrir los gráficos interactivos cliqueándolas.
+> Se usa la librería Plotly para generar gráficos interactivos.  
+> Al colocar cursor sobre *datapoint* se muestra *pop-up* con todas las estadíticas del Pokemon.  
+> A continuación se muestran imágenes planas, pero se pueden abrir los gráficos interactivos cliqueándolas.  
 
-En el siguiente gráfico se colorean los Pokemon según su *tipo primario*.
+### Gráfico por tipo primario
+En el siguiente gráfico se ubican los Pokemon según los componentes de t-SNE y se colorean según su *tipo primario*.
 
 [<img src="images/by_type.svg" width=800 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/by_type_text.html)
 
@@ -125,12 +129,16 @@ Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by
 - También agrupa los Pokemon legendarios aun cuando tienen *tipos* distintos.
 - Resulta interesante que agrupa a Charizard cerca de los legendarios, lo que tiene sentido puesto que es uno de los Pokemons más fuertes.
 
-En el siguiente gráfico se colorean los Pokemon según su *tipo secundario*. 
+### Gráfico por tipo secundario
+En el siguiente gráfico se ubican los Pokemon según los componentes de t-SNE y se colorean según su *tipo secundario*. 
 
 [<img src="images/by_type_2.svg" width=800 height = "auto"></img>](https://rhoffmannv.github.io/t-sne/html/by_type_2_text.html)
-<img src="images/by_type_2.svg" width=600 height = "auto"></img>
 
 Ver gráfico interactivo [aquí 📊](https://rhoffmannv.github.io/t-sne/html/by_type_2_text.html)  
 
 - Se puede ver que el algoritmo t-SNE también separa claramente los Pokemon según su *tipo secundario*.
+- Se muestran todos los Pokemon sin *tipo secundario* en rojo y se puede ver que quedan también agrupados en el lado izquierdo del gráfico.
 
+### Gráfico 3D
+
+Se crea gráfico 
